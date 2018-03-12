@@ -4851,6 +4851,8 @@ with pkgs;
 
   sstp = callPackage ../tools/networking/sstp {};
 
+  staytus = callPackage ../servers/monitoring/staytus { };
+
   su-exec = callPackage ../tools/security/su-exec {};
 
   subsurface = libsForQt5.callPackage ../applications/misc/subsurface { };

@@ -220,7 +220,7 @@ in {
       };
 
       enableACME = mkOption {
-        type = type.bool;
+        type = types.bool;
         default = true;
         description = ''
           Whether to enable HTTPS via Let's Encrypt

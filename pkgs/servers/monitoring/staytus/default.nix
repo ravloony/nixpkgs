@@ -8,6 +8,7 @@ let
     gemfile = ./Gemfile;
     lockfile = ./Gemfile.lock;
     gemset = ./gemset.nix;
+    groups = ["default" "development"];
   };
 
 in

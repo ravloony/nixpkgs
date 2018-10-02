@@ -18,8 +18,8 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "adamcooke";
     repo = "staytus";
-    rev = "8a601d2f1778d8fb878701ca88e7b28b1ec3c9c6";
-    sha256 = "0fbrm5f3li65bpgki54nb4w1hg1mhy2w918pqv904dimgkikxv7l";
+    rev = "fc4ed22a02731064c30368010e579283e36321be";
+    sha256 = "1i2s064m3njl8va498k57rxg0d4x8sicfk7srbxq9mzj6h24ai1d";
   };
 
   buildInputs = [ env.wrappedRuby env nodejs ];

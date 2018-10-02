@@ -219,6 +219,14 @@ in {
         '';
       };
 
+      enableACME = mkOption {
+        type = type.bool;
+        default = true;
+        description = ''
+          Whether to enable HTTPS via Let's Encrypt
+        '';
+      };
+
       pumaDebug = mkOption {
         type = types.bool;
         default = false;
@@ -354,8 +362,8 @@ in {
     services.nginx = {
       virtualHosts = {
         "${builtins.head cfg.vhosts}" = {
-          forceSSL = true;
-          enableACME = true;
+          forceSSL = cfg.enableACME;
+          enableACME = cfg.enableACME;
           root = "${runDir}";
           serverAliases = builtins.tail cfg.vhosts;
 
